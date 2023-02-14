@@ -13,7 +13,7 @@ import { EmailSchema } from "../validators/emialValidator";
 import { OtpSchema } from "../validators/otpValidator";
 
 @controller("/auth")
-export class AuthenticationsController extends BaseController {
+export class AuthenticationsControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE) private readonly authenticationService: AuthenticationService;
 
   @httpPost("/signUp", validate({ schema: CreateUserSchema }))

@@ -13,7 +13,7 @@ import { CreateServiceSchema } from "../validators/createServiceValidator";
 import { upload } from "@shared/middlewares/fileUpload";
 
 @controller("/service")
-export class ServiceController extends BaseController {
+export class ServiceControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.SERVICE_SERVICE) private readonly serviceService: ServiceService;
 
   @httpPost("/", validate({ schema: CreateServiceSchema }), upload.single("file"))

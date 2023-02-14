@@ -12,7 +12,7 @@ import { CreateProductLeaseSchema } from "../validators/createProductLeaseValida
 import { UpdateProductLeaseSchema } from "../validators/updateProductLeaseValidator";
 
 @controller("/product/lease")
-export class ProductsLeaseController extends BaseController {
+export class ProductsLeaseControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.PRODUCTS_LEASE_SERVICE) private readonly productLeaseService: ProductLeaseService;
 
   @httpPost("/", validate({ schema: CreateProductLeaseSchema }))

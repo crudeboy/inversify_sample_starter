@@ -12,7 +12,7 @@ import { UpdateProductCatogorySchema } from "../validators/updateProductCategory
 import { authenticate, grantAdminAaccess } from "@shared/middlewares/authentication";
 
 @controller("/product/categories")
-export class ProductCategoriesController extends BaseController {
+export class ProductCategoriesControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.PRODUCT_CATEGORY_SERVICE) private readonly productCategoryService: ProductCategoryService;
 
   @httpPost("/", authenticate(), grantAdminAaccess(), validate({ schema: CreateProductCatogorySchema }))

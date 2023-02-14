@@ -17,7 +17,7 @@ import { inject } from "inversify";
 let { lazyInject } = getDecorators(container);
 
 @controller("/admin")
-export class AdminController extends BaseController {
+export class AdminControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.ADMIN_SERVICE) private readonly adminService: AdminService;
 
   @httpPost("/", validate({ schema: CreateAdminSchema }))

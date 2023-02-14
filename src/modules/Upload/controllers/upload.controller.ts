@@ -8,7 +8,7 @@ import { controller, httpPost, next, request, response } from "inversify-express
 import { NextFunction } from "express";
 
 @controller("/upload")
-export class UploadController extends BaseController {
+export class UploadControllers extends BaseController {
   @httpPost("/", upload.single("file"))
   async signUp(@request() req: Request, @response() res: Response, @next() next: NextFunction) {
     try {

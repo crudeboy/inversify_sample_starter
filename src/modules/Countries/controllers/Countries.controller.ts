@@ -7,7 +7,7 @@ import CountriesService from "../services/Countries.service";
 import { BaseController } from "../../../shared/helpers/base";
 
 @controller("/location")
-export class CountriesController extends BaseController {
+export class CountriesControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.COUNTRIES_SERVICE) private readonly countriesService: CountriesService;
 
   @httpGet("/countries")

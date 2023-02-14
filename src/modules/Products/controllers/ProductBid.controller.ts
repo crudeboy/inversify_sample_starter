@@ -12,7 +12,7 @@ import { CreateProductBidSchema } from "../validators/createProductBidValidator"
 import { UpdateProductBidSchema } from "../validators/updateProductBidValidator";
 
 @controller("/product/bid")
-export class ProductsBidController extends BaseController {
+export class ProductsBidControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.PRODUCTS_BID_SERVICE) private readonly productBidService: ProductBidService;
 
   @httpPost("/", validate({ schema: CreateProductBidSchema }))

@@ -13,7 +13,7 @@ import { adminAuthenticate, authenticate, grantAdminAaccess, grantFranchiseeAacc
 import { upload } from "@shared/middlewares/fileUpload";
 
 @controller("/product")
-export class ProductsController extends BaseController {
+export class ProductsControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.PRODUCTS_SERVICE) private readonly productsService: ProductsService;
 
   @httpPost("/", upload.single("file"))

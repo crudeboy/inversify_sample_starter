@@ -16,7 +16,7 @@ import { ResetPasswordSchema } from "../validators/resetPasswordValidator";
 import ClientsService from "../services/Clients.service";
 
 @controller("/users")
-export class UsersController extends BaseController {
+export class UsersControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.USERS_SERVICE) private readonly usersService: UsersService;
   @inject(SERVICE_IDENTIFIERS.USER_TOKEN_SERVICE) private readonly userTokenService: UserTokenService;
   @inject(SERVICE_IDENTIFIERS.CLIENTS_SERVICE) private readonly clientsService: ClientsService;

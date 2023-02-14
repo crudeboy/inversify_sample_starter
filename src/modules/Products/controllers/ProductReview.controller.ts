@@ -12,7 +12,7 @@ import { IProductReview } from "../interfaces/IProductReview";
 import { UpdateProductReviewSchema } from "../validators/updateProductReviewValidator";
 
 @controller("/product/review")
-export class ProductReviewController extends BaseController {
+export class ProductReviewControllers extends BaseController {
   @inject(SERVICE_IDENTIFIERS.PRODUCTS_REVIEW_SERVICE) private readonly productReviewsService: ProductReviewsService;
 
   @httpPost("/", authenticate(), grantAdminAaccess(), validate({ schema: CreateProductReviewSchema }))
