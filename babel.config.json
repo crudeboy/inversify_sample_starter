@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "targets": { "node": "current" } }],
+    // "@babel/preset-env",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-syntax-typescript",
+    "@babel/plugin-proposal-class-properties",
+    ["@babel/plugin-transform-typescript", { "allowNamespaces": true }],
+    "@babel/plugin-transform-runtime"
+  ]
+}

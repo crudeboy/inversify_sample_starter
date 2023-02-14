@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": "./src",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "types": ["reflect-metadata"],
+    "paths": {
+      "@modules/*": ["modules/*"],
+      "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", "coverage", "./*.js", "dist", "docker"],
+  "include": ["src/**/*", "src/migrations/20221128125316_seed_user_roles.ts", "src/migrations/20221130104127_add-role-id-column-to-users-table.ts", "src/migrations/20221206014540_create_creatives_table.ts"]
+}
